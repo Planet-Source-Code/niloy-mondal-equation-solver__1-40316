@@ -1,0 +1,44 @@
+		EQUATION SOLVER
+Author :- Niloy Mondal
+Email   :- niloygk@yahoo.com
+===============================================================
+
+Equation Solver uses the Bisectional methord to find out the roots of a given algebraic equation. The methord is very simple to understand. No tough mathematics involved, no derivations. Just simple logic. Anyone who has done high school algebra can understand this.
+
+Lets understand the method by an example. Suppose we want to find the roots of equation 
+4x^3 + 7x^2 + x -1=0. This equation does not have any perfect roots. Lets draw a graph of this equation:- y = 4x^3 + 7x^2 + x -1. A .jpg file is provided which shows you the graph. Now, the roots of the equation are the points where the green line in the graph touches the x-axis. You will see that the green line touches the x-axis at three points which means it has three roots. By looking at the graph you can make the following approximations:-
+The first root lies between -2 and -1.
+The second root lies between -1 and 0.
+The third root lies between 0 and 1.
+
+But what if we dont want to draw the graph. Then how can we make the approximations? Here we will use a property of these curves. Lets for simplicity, assume the first root is 1.5 . If we substitue -2 in the equation y = 4x^3 + 7x^2 + x -1.
+If x = -2 
+4(-2)^3+7(-2)^2-2-1 = -7 (notice the answer is negative)
+If x = -1
+4(-1)^3+7(-1)^2-1-1 = 1 (the answer is positive)
+
+So, whenever by substituting two values, the two respective answers differ in sign, we can say that a root exists between the two values. This is how we can make a approximation without graph. This is a sort of trial and error methord. Just keep on substuting values till you find the signs differing. So we made an approximation, now what?
+
+Okay, we know that one of the root lies between -2 and -1. Now we will divide the range -2 to -1 into two halves. The midpoint will be:-
+	midpoint = (uppervalue+lowervalue)/2
+Therefore   midpoint = (-1-2)/2 = -1.5
+
+No we will again substitute the values :- 	-2,  -1.5, -1
+If x = -2   		y = -7 (the answer is negative)
+If x = -1.5		y = -0.25( answer is negative)
+If x = -1		y = 1 	(the answer is positive)
+
+So  now we know that the root lies lies between the -1 and -1.5 (the right half). Similalry, we again break up the range -1 to -1.5 into two halfes and continue the process. We continue the process till we have made the range small enough. As the range becomes smaller, the approxiamation becomes more accurate. The number of times we do the halfing and substituting process is called ITERIATIONS.
+
+That's it. The logic wasn't tough to understand, was it? In the end, when you have done enough iteriations, the midpoint will be the root that you are searching. When you substitute midpoint in the equation as x, the answer (y) will be very close to zero(the value of y tends to 0). If it becomes 0, then the root are perfect roots. The more the value of y is close to 0, the more the value x (midpoint)  is accurate. This is controlled in the program through variable 'tolerance'.
+
+Other Uses:-
+The program can be used to find the square roots and cube roots of a number. Suppose you want to the square root of 13. Hence,
+X=root(13)
+therefore, X^2 = 13
+therefore, X^2 - 13 = 0
+Hence, coefficient of X^3=0, coefficient of X^2=1, coefficient of X = 0, constant = -13. Put these values, and you will get the square root of 13. Cube root can be found in the same manner.
+
+You can write a much enhanced program, where the user can select the power of 'X' terms. I dont think it will be difficult.
+
+See ya.
